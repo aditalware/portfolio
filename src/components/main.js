@@ -4,7 +4,8 @@ import HomePage from './Homepage';
 import Resume from './Resume';
 import Project from './Project';
 import Contact from './Contact';
-
+import ContactMe from './ContactMe';
+import Internships from './Internships';
 class Main extends Component{
 
     constructor(props)
@@ -24,6 +25,8 @@ class Main extends Component{
        <Route path="/contact" component={Contact}/>
        <Route path="/project" component={Project}/>
        <Route path="/resume" component={Resume}/>
+       <Route path="/contactme" component={()=><ContactMe setflag={this.props.setflag}/>}/>
+       <Route path="/internship" component={Internships}/>
        <Redirect to="/" />
     </Switch>
          </>

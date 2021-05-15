@@ -15,8 +15,11 @@ class Project extends Component{
     {
         if(this.state.activeTab==0)
         {
-            return(<div className="projects-grid">
-                <Card shadow={5} style={{minWidth: '450' ,margin: 'auto'}}>
+            return(
+                <>
+                <div className="projects-grid move">
+                
+                <Card shadow={5} style={{minWidth: '450' ,margin: 'auto',marginBottom:'10px'}}>
                      <CardTitle style={{color: 'black',height: '176px', background: 'url(/images/project1.jpg) center / cover'}} >
                      <img className="logo-img" src="/images/react-logo.png"></img>
                      </CardTitle>
@@ -38,19 +41,21 @@ class Project extends Component{
 
                 </Card>
 
-                <Card shadow={5} style={{minWidth: '450' ,margin: 'auto'}}>
+                <Card shadow={5} style={{minWidth: '450' ,margin: 'auto',marginBottom:'10px'}}>
                      <CardTitle style={{color: 'black',height: '176px', background: 'url(/images/project2.jpg) center / cover'}} >
                      
                      <img className="logo-img" src="/images/react-logo.png"></img>
                      </CardTitle>
                      <CardText>
-                           <h4 style={{color:'black'}}>                           <i style={{color:'lightgreen'}} className="fa fa-lg fa-check"></i>
+                           <h4 style={{color:'black'}}>   <i style={{color:'lightgreen'}} className="fa fa-lg fa-check"></i>
                            Project 2</h4>
-                           Course Management Application for a learner to keep track.
+                           OnBoard Application -Elevating Online Education
                      </CardText>
 
                      <CardActions>
-                     <Button colored><a style={{ textDecoration:'None', color:'blue'}} href="https://github.com/aditalware/TaskBlueTech"><i className="fa fa-github-square"></i>GitHub</a></Button>
+                     <Button colored><a style={{ textDecoration:'None', color:'blue'}} href="https://github.com/aditalware/notechat"> <i className="fa fa-github-square"></i>  GitHub</a></Button>
+                     <Button colored><a style={{ textDecoration:'None', color:'green'}} href="https://jainil4801.pythonanywhere.co"> <i className="fa fa-external-link-square"></i>  Test Live</a></Button>
+
                      </CardActions>
 
                      <CardMenu style={{color:'black'}}>
@@ -61,18 +66,20 @@ class Project extends Component{
 
                 </Card>
 
-                <Card shadow={5} style={{minWidth: '450' ,margin: 'auto'}}>
-                <CardTitle style={{color: 'black',height: '176px', background: 'url(/images/project3.jpg) center / cover'}} >
+                <Card shadow={5} style={{minWidth: '450' ,margin: 'auto',marginBottom:'10px'}}>
+                <CardTitle style={{color: 'black',height: '176px', background: 'url(/images/project3.png) center / cover'}} >
                 <img className="logo-img" src="/images/react-logo.png"></img>
                 </CardTitle>
                 <CardText>
                       <h4 style={{color:'black'}}>  <i style={{color:'lightgreen'}} className="fa fa-lg fa-check"></i>
                       Project 3</h4>
-                      Mini Restraunt Web Application 
+                      Fortune Teller- wonderfull experience of tarot draws 
                 </CardText>
 
                 <CardActions>
-                  <Button colored><a style={{ textDecoration:'None', color:'blue'}} href="https://github.com/aditalware/React_redux_restraunt_website"><i className="fa fa-github-square"></i>GitHub</a></Button>
+                  <Button colored><a style={{ textDecoration:'None', color:'blue'}} href="https://github.com/aditalware/fortuneTeller"><i className="fa fa-github-square"></i>GitHub</a></Button>
+                  <Button colored><a style={{ textDecoration:'None', color:'green'}} href="https://aditalware.github.io/fortuneTeller/"> <i className="fa fa-external-link-square"></i>  Test Live</a></Button>
+
                 </CardActions>
 
                 <CardMenu style={{color:'black'}}>
@@ -80,7 +87,36 @@ class Project extends Component{
                 </CardMenu>
                 </Card>
                 
-                </div>);
+
+                
+                
+                </div>
+                <div className="projects-grid move">
+                <Card shadow={5} style={{minWidth: '450' ,margin: 'auto',marginBottom:'10px'}}>
+                <CardTitle style={{color: 'black',height: '176px', background: 'url(/images/project4.png) center / cover'}} >
+                <img className="logo-img" src="/images/react-logo.png"></img>
+                </CardTitle>
+                <CardText>
+                      <h4 style={{color:'black'}}>  <i style={{color:'lightgreen'}} className="fa fa-lg fa-check"></i>
+                      Project 4</h4>
+                      To Do List- Add Edit and Remove 
+                </CardText>
+
+                <CardActions>
+                  <Button colored><a style={{ textDecoration:'None', color:'blue'}} href="https://github.com/aditalware/React_Redux_ToDo"><i className="fa fa-github-square"></i>GitHub</a></Button>
+                  <Button colored><a style={{ textDecoration:'None', color:'green'}} href="https://aditalware-todo-list.herokuapp.com/"> <i className="fa fa-external-link-square"></i>  Test Live</a></Button>
+
+                </CardActions>
+
+                <CardMenu style={{color:'black'}}>
+                    <IconButton name="share"/>
+                </CardMenu>
+                </Card>
+                </div>
+                
+                
+                </>
+                );
         }
         else if(this.state.activeTab==1)
         {
@@ -93,8 +129,8 @@ class Project extends Component{
              <div className="category-tabs">
              
                <Tabs activeTab={this.state.activeTab} onChange={(tabId)=>this.setState({activeTab:tabId})} ripple>
-                   <Tab>React</Tab>
-                   <Tab>Bootstrap</Tab>
+                   <Tab>React JS</Tab>
+                   <Tab>Full Stack</Tab>
                </Tabs>
 
                 <Grid >

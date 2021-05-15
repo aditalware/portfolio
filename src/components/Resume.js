@@ -9,7 +9,7 @@ class Resume extends Component{
      {
          return(
              <div>
-             <Grid>
+             <Grid className="fade">
                <Cell col={4}>
                    <div style={{textAlign: 'center'}}>
                          <img
@@ -24,7 +24,7 @@ class Resume extends Component{
                    </h2>
                 
                    <h4 style={{color:'grey'}}>
-                    C++ Programmer | Web Developer
+                    C++ Programmer | MERN Stack Developer
                    </h4>
                    <hr style={{borderTop:'3px solid #833fb2',width:"50%"}}/>
 
@@ -37,7 +37,7 @@ class Resume extends Component{
 
                    
                    <p>
-                   <strong>Skills :</strong> C++ Intermediate, ReactJs, NodeJs Basics, Bootstrap,Html ,CSS ,SQL , Python Basics
+                   <strong>Skills :</strong> C++ Intermediate,Javascript, ReactJs, Redux,NodeJs ,Express,Html ,CSS ,SQL , Python Basics
                    </p>
 
                    <hr style={{borderTop:'3px solid #833fb2',width:"50%"}}/>
@@ -81,10 +81,10 @@ class Resume extends Component{
                   schoolname="Indian Institute of Information Technology Vadodara"
                   type="BTECH Computer Science"
                   resulttype="CPI"
-                  credits="9.61/10"
+                  credits="9.42/10"
                   />
 
-                  <hr style={{borderTop:'3px solid #833fb2',width:"50%"}}/>
+                  <hr style={{borderTop:'3px solid white',width:"50%"}}/>
 
 
                   <h2>
@@ -94,6 +94,12 @@ class Resume extends Component{
                <Training
                time="Apr 2020 - Jun 2020"               
                Course="ReactJS Frontend Development"
+               certified="Coursera"
+
+               />
+                <Training
+               time="Dec2020 - Jan 2021"               
+               Course="React Native Development"
                certified="Coursera"
 
                />
@@ -121,10 +127,16 @@ class Resume extends Component{
                certified="Thinking Machines Pvt Lmtd."
                />
 
+               <hr style={{borderTop:'3px solid white',width:"50%"}}/>
+
                <h2>
                Accompolishments
                </h2>
-
+               <Accompolishment
+               time="December 2020"
+               name="HACKIIITV 2020 WINNER"
+               description="About Presenting Technical Solutions for Public Needs and Problems"
+               />
                <Accompolishment
                time="October 2019"
                name="HACKIIITV 2019 RUNNER_UP"

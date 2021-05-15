@@ -5,7 +5,7 @@ class Contact extends Component{
      render()
      {
          return(
-             <div className="contact-body">
+             <div className="contact-body fade">
              <Grid className="contact-grid">
                 <Cell col={6}>
                     
@@ -20,6 +20,7 @@ class Contact extends Component{
 
                 <p style={{width:'75%',margin:'auto',paddingTop:'1em'}}>
                  I am an extremely enthusiastic and hardworking engineering undergraduate specialising in Computer Science.
+                 Hardworking ,Creative and reliable Frontend Developer with strong ability in communication, critical thinking, time management and a team player. Offering Good Hands in ReactJs Frontend Development.Highly organized, proactive and punctual with team-oriented mentally.4 months of good experience as an intern in a startup .Committed to provide high level solutions that drive technology and provide outstanding performance
                 </p>
 
 
