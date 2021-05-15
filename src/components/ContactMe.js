@@ -4,6 +4,12 @@ import Card from 'react-bootstrap/Card';
 import StarRatingComponent from 'react-star-rating-component';
 
 
+const required = (val) => val && val.length;
+const maxLength = (len) => (val) => !(val) || (val.length <= len);
+const minLength = (len) => (val) => val && (val.length >= len);
+const isNumber = (val) => !isNaN(Number(val));
+const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+
 function Feedback(props){
     return(
         <Card style={{ width: '18rem' }} className={"col col-5"}>
@@ -29,13 +35,17 @@ class ContactMe extends React.Component {
             email:"",
             rating:1,
             status:'Please send your Feedback',
-            cards:[]
+            cards:[],
+            allSet1:false,
+            allSet2:false,
+            allSet3:false
         };
         this.changeFullName=this.changeFullName.bind(this);
         this.changeFeedback=this.changeFeedback.bind(this);
         this.changeEmail=this.changeEmail.bind(this);
         this.setDefault=this.setDefault.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
+
 
 
     }
@@ -50,18 +60,29 @@ class ContactMe extends React.Component {
     
 
     changeFullName=(e)=>{
+        
+        var check= required(e) && minLength(2);
+        this.setState({allSet1:check});
         this.setState({fullname:e})
     }
+
     changeFeedback=(e)=>{
+        var check= required(e) && minLength(1);
+        this.setState({allSet2:check});
         this.setState({feedback:e})
     }
+
     changeEmail=(e)=>{
+        var check= required(e) && validEmail(e);
+        this.setState({allSet3:check});
         this.setState({email:e})
     }
     
 
     handleSubmit=(event)=>{
         event.preventDefault();
+
+        if(this.state.allSet1 && this.state.allSet2 && this.state.allSet3){
         const user={
             fullname:this.state.fullname,
             rating:this.state.rating,
@@ -77,7 +98,10 @@ class ContactMe extends React.Component {
 
             },4000)
         })
-        .catch((err)=>console.log(err))
+        .catch((err)=>console.log(err))}
+        else{
+            alert('One of the below fields is empty or invalid. Please Check!')
+        }
 
     }
 
